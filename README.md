@@ -1,6 +1,6 @@
-**Banking Analytics** 
+**Banking Analytics & BI: : Credit Risk Propensity Modelling and Customer Segmentation** 
 
-A Power BI dashboard built on 3,000 banking clients, covering credit risk, lending, deposits, and client retention. Pages are linked by the navigation bar; every page can be filtered by join year, time with the bank, gender, and age.
+Segmentation and credit-risk analysis of 3,000 banking clients, delivered as a 4-page Power BI report. Clients are segmented by risk rating, income band, loyalty tier, and engagement to show where credit risk sits, where the cross-sell opportunities are, and which groups stay longest. Every page can be filtered by join year, time with the bank, gender, and age.
 
 ![Banking Analytics Dashboard Home](doc/pbi_home.png)
 
@@ -9,10 +9,11 @@ Performed EDA in Python, stored data in a MySQL database, modelled it as a star 
 **View the 4-page report and interactive dashboard on Power BI Service** - [LINK](https://app.powerbi.com/view?r=eyJrIjoiZWQ1NjBjNGQtYmZkZC00YjE3LWFjMWYtOGM5ZDc5YTRkNzU3IiwidCI6ImU1ZWFlNDA1LWJhMTUtNDA0Yy05MTA2LWRkNGRhNzlhOWNjNiJ9) 
 
 ##
-Data: 3,000 clients, 25 columns (demographics, deposits, loans, fees and risk rating)
+Data Source: [Kaggle / where Banking.csv came from]. The figures are in the dataset’s own currency units.
+3,000 clients, 25 columns (demographics, deposits, loans, fees and risk rating)
 Tools: Python, MySQL, Power BI, DAX, Canva, Power BI Service
 
-**??** 
+Which clients are most likely to become high risk, and what drives it?
 
 What I wanted to find out.
 Which client groups carry the most credit risk, and how does that risk vary by region and income?
@@ -20,9 +21,10 @@ Where are the cross-sell opportunities, for example clients with loans but no de
 Which clients have both bank loans and business lending, and how much is that exposure worth?
 How does income relate to borrowing and to the fees the bank earns?
 How long do clients stay with the bank, and which groups stay the longest?
-How it fits together
 
-**Banking.csv  →  Python (Jupyter)  →  MySQL  →  Power BI  →  Power BI Service**
+**How it fits together**
+
+**Banking.csv  →  Python (Jupyter, EDA + scikit-learn propensity model)  →  MySQL  →  Power BI  →  Power BI Service**
 
 ##
 Data cleaning with Python. 
@@ -31,6 +33,12 @@ Power BI turns it into something a business user can explore without writing any
 
 **1. EDA.** Stack: Pandas, NumPy, Matplotlib, Seaborn, Jupyter.
 
+I segmented the 3,000 clients four ways, so each page can answer “which group, and how risky?”:
+
+Risk: high risk = risk rating 4 or 5, which flags 482 clients.
+Income band: Low (1,027), Mid (1,517), High (456).
+Loyalty tier: Jade (1,331), Silver (767), Gold (585), Platinum (317).
+Engagement: time with the bank, banded with DATEDIFF and SWITCH. The largest group has been with the bank more than 10 years
 I checked and confirmed all 25 features. 
 I converted Joined Bank to a standard date format (YYYY-MM-DD) so MySQL and Power BI would both read it as a date.
 I then added an Income Band column based on estimated income:
@@ -68,11 +76,12 @@ I created a schema called banking_case with a clients_banking table, using clien
 
 To confirm there were no duplicate IDs, I ran this check, which returned no rows:
 
-sql
+```sql
 SELECT client_id, COUNT(*)
 FROM clients_banking
 GROUP BY client_id
 HAVING COUNT(*) > 1;
+```
 
 
 ![MYSQLworkbench](doc/mysql_workbench.png)
@@ -127,12 +136,12 @@ Engagement timeframe data shows that the largest portion of the client base has 
 ##
 **Skills**
 
-Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook · MySQL · SQL · Multi-Table Joins · Relational Schema Design · Data Cleaning · Exploratory Data Analysis · Power BI · DAX · Star Schema · Data Modelling · Power Query · KPI Dashboard Design · Canva Design · Business Intelligence · Data Storytelling · Power BI Service
+Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook · Propensity Modelling · Logistic Regression · scikit-learn· MySQL · SQL · Multi-Table Joins · Relational Schema Design · Data Cleaning · Exploratory Data Analysis · Power BI · DAX · Star Schema · Customer Segmentation · Data Modelling · Power Query · KPI Dashboard Design · Canva Design · Business Intelligence · Data Storytelling · Power BI Service
 
 ## 
 Connect:
 
-OLAMIDE AKANNI | Data Sci. | BI
+OLAMIDE AKANNI | Data Scientist
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/olamide-akanni-b240ab18a/)
 [![Substack](https://img.shields.io/badge/Substack-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://substack.com/@lamideakanni03)
