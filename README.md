@@ -1,4 +1,4 @@
-**Banking Analytics & BI: Credit Risk Propensity Modelling and Customer Segmentation** 
+**Banking Analytics & BI: Credit Risk Propensity Analysis and Customer Segmentation** 
 
 Segmentation and credit-risk analysis of 3,000 banking clients, delivered as a 4-page Power BI report. Clients are segmented by risk rating, income band, loyalty tier, and engagement to show where credit risk sits, where the cross-sell opportunities are, and which groups stay longest. Every page can be filtered by join year, time with the bank, gender, and age.
 
@@ -26,7 +26,7 @@ How long do clients stay with the bank, and which groups stay the longest?
 
 **How it fits together**
 
-**Banking.csv  →  Python (Jupyter, EDA + scikit-learn propensity model)  →  MySQL  →  Power BI  →  Power BI Service**
+**Banking.csv  →  Python (Jupyter, EDA + scikit-learn propensity Analysis)  →  MySQL  →  Power BI  →  Power BI Service**
 
 ##
 Data cleaning with Python. 
@@ -138,7 +138,7 @@ Engagement timeframe data shows that the largest portion of the client base has 
 ##
 **Skills**
 
-Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook · Propensity Modelling · Logistic Regression · scikit-learn· MySQL · SQL · Multi-Table Joins · Relational Schema Design · Data Cleaning · Exploratory Data Analysis · Power BI · DAX · Star Schema · Customer Segmentation · Data Modelling · Power Query · KPI Dashboard Design · Canva Design · Business Intelligence · Data Storytelling · Power BI Service
+Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook · Propensity Modelling · Logistic Regression · scikit-learn· MySQL · SQL · Multi-Table Joins · Relational Schema Design · Data Cleaning · Exploratory Data Analysis · Power BI · DAX · Star Schema · Customer Segmentation · Data Modelling · Churn Propensity Analysis · Power Query · KPI Dashboard Design · Canva Design · Business Intelligence · Data Storytelling · Power BI Service
 
 ## 
 Connect:
