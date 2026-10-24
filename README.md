@@ -9,8 +9,10 @@ Performed EDA in Python, stored data in a MySQL database, modelled it as a star 
 **View the 4-page report and interactive dashboard on Power BI Service** - [LINK](https://app.powerbi.com/view?r=eyJrIjoiZWQ1NjBjNGQtYmZkZC00YjE3LWFjMWYtOGM5ZDc5YTRkNzU3IiwidCI6ImU1ZWFlNDA1LWJhMTUtNDA0Yy05MTA2LWRkNGRhNzlhOWNjNiJ9) 
 
 ##
-Data Source: [Kaggle / where Banking.csv came from]. The figures are in the dataset’s own currency units.
+Data Source: [Kaggle / where Banking.csv came from]. 
+The figures are in the dataset’s own currency units.
 3,000 clients, 25 columns (demographics, deposits, loans, fees and risk rating)
+
 Tools: Python, MySQL, Power BI, DAX, Canva, Power BI Service
 
 Which clients are most likely to become high risk, and what drives it?
