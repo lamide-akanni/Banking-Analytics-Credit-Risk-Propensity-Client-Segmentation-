@@ -1,4 +1,4 @@
-**Banking Analytics & BI: Credit Risk Propensity Analysis and Customer Segmentation** 
+**Banking Analytics: Credit Risk Propensity & Client Segmentation** 
 
 Segmented 3,000 banking clients by risk rating, income, loyalty, and engagement, flagging 482 high-risk clients; delivered as a 4-page Power BI report. Clients are segmented by risk rating, income band, loyalty tier, and engagement to show where credit risk sits, where the cross-sell opportunities are, and which groups stay longest. Every page can be filtered by join year, time with the bank, gender, and age.
 
